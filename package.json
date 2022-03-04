@@ -4,7 +4,7 @@
   "description": "This application displays basic personal and contact information about team members.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose tests/*"
   },
   "repository": {
     "type": "git",
