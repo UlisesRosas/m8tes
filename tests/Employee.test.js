@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee.js');
 
-// employee attribute test
+// employee object test
 test('creates an employee object', () => {
     //    testing if employee is an object
     const employee = new Employee();
@@ -31,7 +31,7 @@ test('employee constructor binds email property', () => {
 });
 
 // testing getName() method
-test('employee constructor binds name property', () => {
+test('employee method returns name', () => {
     //    testing if employee is an object
     const name = 'Dane'
     const employee = new Employee(name);
@@ -39,11 +39,18 @@ test('employee constructor binds name property', () => {
 
 });
 
-test('employee constructor binds name property', () => {
-    //    testing if employee is an object
+test('employee method returns id', () => {
+    //    testing if employee is an object with hypathetical value
     const id = 14;
     const employee = new Employee('Ulises', id);
     expect(employee.getId()).toBe(id);
+});
+
+test('employee method returns email', () => {
+    //    testing if employee is an object with hypathetical value
+    const email = 'myemail@soaos';
+    const employee = new Employee('Ulises', 14, email);
+    expect(employee.getEmail()).toBe(email);
 });
 
 
