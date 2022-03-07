@@ -74,7 +74,7 @@ const addManager = () => {
         //Pushing new object in to temMembers array
         teamMembersArr.push(manager);
         console.log(teamMembersArr);
-        // addTeamMember();
+        addTeamMember();
 
     })
 
@@ -84,6 +84,33 @@ addManager();
 
 
 // cross roads function for user to add different employees "addTeamMember"
-// **addEngenieer 
+const addTeamMember = () => {
+    return inquirer.prompt([
+        {
+            type: 'confirm',
+            name:'addEngineer',
+            message: 'Would you like to add an engineer to the team?',
+            default: false
+        },
+
+        {
+            type:'confirm',
+            name: 'addIntern',
+            message: 'Would you like to add an intern to the team?',
+            default: false
+        },
+    ])
+    .then (() => {
+        if (addEngineer){
+            // return addEngineer function call to inquire about engineer
+        };
+        if (addIntern){
+            // return addIntern function call to inquire about intern
+        }
+    })
+
+}
+
+// **addEngineer 
 // **addIntenr 
 // **Build team 
