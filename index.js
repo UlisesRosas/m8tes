@@ -87,26 +87,26 @@ addManager();
 const addTeamMember = () => {
     return inquirer.prompt([
         {
-            type: 'confirm',
-            name:'addEngineer',
-            message: 'Would you like to add an engineer to the team?',
-            default: false
-        },
-
-        {
-            type:'confirm',
-            name: 'addIntern',
-            message: 'Would you like to add an intern to the team?',
-            default: false
+            type: 'list',
+            name:'memberChoice',
+            message: 'What team member would you like to add?',
+            choices: ['add Engineer', 'add Intern', 'quit and build']
         },
     ])
-    .then (() => {
-        if (addEngineer){
-            // return addEngineer function call to inquire about engineer
-        };
-        if (addIntern){
-            // return addIntern function call to inquire about intern
-        }
+    .then (choiceInput => {
+        console.log(choiceInput);
+        // to do
+        // determine what the user has selected
+
+        
+         if (choiceInput.memberChoice === 'add Engineer'){
+             // return addEngineer function call to inquire about engineer
+             console.log('engineer added');
+            //  return inquirer prompt for engineer
+         };
+        //  if (addIntern){
+        //     // return addIntern function call to inquire about intern
+        // }
     })
 
 }
