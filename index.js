@@ -90,18 +90,20 @@ const addTeamMember = async () => {
             choices: ['add Engineer', 'add Intern', 'quit and build']
         }
     ])
+    // allows user to enter different cases based on choice of team member
     switch (memberChoice) {
         case 'add Engineer':
             return addEngineer();
         case 'add Intern':
             return addIntern();
         case 'quit and build':
+            // test line
             return buildTeam();
 
     }
 }
 
-
+// Inquiers about engineer data 
 const addEngineer = async () => {
     const engineerInput = await inquirer.prompt([
         {
@@ -175,6 +177,7 @@ const addEngineer = async () => {
     addTeamMember();
 }
 
+// Inquiers about intern object
 const addIntern = async() => {
      const { name, id, email, school } = await
     inquirer.prompt([
@@ -243,13 +246,15 @@ const addIntern = async() => {
             const intern = new Intern(name, id, email, school);
             // push new team member in to array
             teamMembersArr.push(intern);
-            console.log(teamMembersArr);
+            // console.log(teamMembersArr);
             return addTeamMember();
 }
 
 
-// **Build team 
+// Builds team 
 const buildTeam = () => {
-    // maDE index file and then passed in data 
-    fs.writeFileSync('index.html', render(teamMembersArr))
+    // made index file and then passed in data 
+    fs.writeFileSync('./dist/index.html', render(teamMembersArr))
+    console.log('finished building team');
+
 }
