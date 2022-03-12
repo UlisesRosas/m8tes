@@ -13,6 +13,8 @@ User can select from three different team members. Manager, Engineer and Intern.
 
 # link
 <!-- walkthrough video link -->
+* Video Walkthrough 
+:[https://drive.google.com/file/d/1yp86qxOHZ1JGUKgZ_-n4OintVbVtiZ8d/view]
 
 # Contributions
-* Mde by [Ulises]
+* Made by [Ulises]
